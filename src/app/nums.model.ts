@@ -1,4 +1,9 @@
+export class Num {
+  constructor(
+    public num: number
+  ){}
+}
+
 export interface Nums {
-    num1: number;
-    num2: number;
+  nums: Num[]
 }
