@@ -1,0 +1,36 @@
+
+.num-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .num{
+    font-size: 100px;
+    border: 5px solid;
+    padding: 50px;
+
+    & + .num{
+      margin-left: 100px;
+    }
+
+  }
+
+}
+
+.btn-wrapper{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+}
+.btn{
+  padding: 20px;
+  font-size: 30px;
+  background-color: #fff;
+  border: 5px solid;
+  cursor: pointer;
+
+  & + .btn{
+    margin-left: 30px;
+  }
+
+}
