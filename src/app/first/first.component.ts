@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Nums} from "../nums.model";
+import {Store} from "@ngrx/store";
+import {AppState} from "../redux/app.state";
+import {Change, Decrease, Increase} from "../redux/nums.action";
 
 @Component({
   selector: 'app-first',
@@ -7,23 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstComponent implements OnInit {
 
+  public nums: Nums;
 
-
-  constructor() { }
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit() {
   }
 
-  // onStart() {
-  //   setInterval( () => {this.nums.num1++; this.nums.num2 -= 2;}, 1000 )
-  // }
-  //
-  // onIncrease(){
-  //   this.nums.num1++;
-  // }
-  //
-  // onDecrease(){
-  //   this.nums.num2--;
-  // }
+  onChange() {
+    setInterval( () => {
+      this.store.dispatch(new Change());
+    }, 1000 );
+
+  }
+
+  onIncrease(){
+    this.store.dispatch(new Increase());
+  }
+
+  onDecrease(){
+    this.store.dispatch(new Decrease());
+  }
 
 }

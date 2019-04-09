@@ -1,9 +1,0 @@
-.num{
-  font-size: 100px;
-  padding: 50px;
-  border: 5px solid;
-
-  & + .num{
-    margin-left: 100px;
-  }
-}

@@ -1,13 +1,20 @@
 import {Action} from "@ngrx/store";
 import INCREASE = NUMS_ACTION.INCREASE;
-import {Nums} from "../nums.model";
 
 export namespace NUMS_ACTION {
-  export const INCREASE = 'INCREASE'
+  export const INCREASE = 'INCREASE';
+  export const DECREASE = 'DECREASE';
+  export const CHANGE = 'CHANGE'
 }
 
 export class Increase implements Action {
-  readonly type = NUMS_ACTION.INCREASE
+  public readonly type = NUMS_ACTION.INCREASE;
+}
 
-  constructor(public payload: Nums) {}
+export class Decrease implements Action {
+  public readonly type = NUMS_ACTION.DECREASE;
+}
+
+export class Change implements Action {
+  public readonly type = NUMS_ACTION.CHANGE;
 }

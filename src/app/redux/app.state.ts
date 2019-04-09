@@ -1,7 +1,7 @@
-import {Num} from "../nums.model";
+import {Nums} from "../nums.model";
 
 export interface AppState {
   carPage: {
-    nums: Num[]
+    nums: Nums
   }
 }

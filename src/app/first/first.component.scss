@@ -1,21 +1,21 @@
-.num-wrapper{
+.btn-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-}
-
-.btn-wrapper{
-  display: flex;
-  justify-content: space-between;
   margin-top: 50px;
 
-  .btn{
-    padding: 20px;
+  .btn {
     background-color: #fff;
     border: 5px solid;
     font-size: 30px;
+    padding: 20px;
     cursor: pointer;
   }
 
+}
+
+.nums-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
